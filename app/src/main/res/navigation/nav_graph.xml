@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/KatalogFragment">
+
+    <fragment
+        android:id="@+id/KatalogFragment"
+        android:name="com.example.pa_mobile.KatalogFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/katalog">
+
+        <action
+            android:id="@+id/action_KatalogFragment_to_DetailFragment"
+            app:destination="@id/DetailFragment" />
+        <action
+            android:id="@+id/action_KatalogFragment_self"
+            app:destination="@id/KatalogFragment" />
+        <argument
+            android:name="page"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_KatalogFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/DetailFragment"
+        android:name="com.example.pa_mobile.DetailFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/detail_komik" >
+        <argument
+            android:name="komikId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_DetailFragment_to_ChapterFragment"
+            app:destination="@id/ChapterFragment" />
+        <action
+            android:id="@+id/action_DetailFragment_to_KatalogFragment"
+            app:destination="@id/KatalogFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ChapterFragment"
+        android:name="com.example.pa_mobile.ChapterFragment"
+        android:label="Chapter Fragment"
+        tools:layout="@layout/detail_chapter" >
+
+        <argument
+            android:name="chapterId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_ChapterFragment_to_DetailFragment"
+            app:destination="@id/DetailFragment" />
+        <argument
+            android:name="komikId"
+            app:argType="string" />
+        <argument
+            android:name="chapterList"
+            app:argType="com.example.pa_mobile.Chapter[]" />
+        <argument
+            android:name="index"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.pa_mobile.FavoriteFragment"
+        android:label="favorite_page"
+        tools:layout="@layout/favorite_page" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_KatalogFragment"
+            app:destination="@id/KatalogFragment" />
+    </fragment>
+</navigation>
