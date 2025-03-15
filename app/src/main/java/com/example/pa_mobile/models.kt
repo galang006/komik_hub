@@ -5,14 +5,7 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 object Constants {
-    const val RAPID_API_KEY = "efd6a1bd64msh66b24a4e4d70b9ep144bcfjsn28ebca2cd5bd"
-    //'X-RapidAPI-Key': '54783c9b68mshcba9b7aef779a18p17a6a7jsn115a58dc1f34',
-    //'X-RapidAPI-Key': '84cb9e3cc0mshbb407e0ce7ac26cp10601ejsn7427c13b53a8',
-    //'X-RapidAPI-Key': 'b53bb91f8amsh6407729f528c092p1e9773jsne59c6c7be581',
-    //'X-RapidAPI-Key': '48cce3ae37msh430cd677c655b34p1c8193jsnf204ece7a8f6',
-    //'X-RapidAPI-Key': 'fde55c18c6mshb86b944fd98ac2dp10a830jsne1b73a94e42c',
-    //'X-RapidAPI-Key': 'efd6a1bd64msh66b24a4e4d70b9ep144bcfjsn28ebca2cd5bd',
-    //'X-RapidAPI-Key': '2581ce78fcmsh88b5380efc84077p170246jsn44368fc3b694'
+    const val RAPID_API_KEY = ""
 }
 
 data class KomikResponse(
